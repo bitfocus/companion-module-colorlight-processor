@@ -74,6 +74,7 @@ var getActionDefinitions = function (self) {
 					max: 64,
 					default: 1,
 					required: true, 
+					isVisible: (action) => !action.issel,
 				},
 				{
 					type: 'dropdown',
@@ -107,17 +108,16 @@ var getActionDefinitions = function (self) {
 				var deviceIdArr = ['0xff', '0xff']
 
 				if (deviceId >= 0 && !isSelAll) {
-					deviceId = deviceId.toString(16)
+					let deviceIdStr = deviceId.toString(16)
 
-					let deviceIdStr = ''
-					if (deviceId.length == 1) {
-						deviceIdStr = '000' + deviceId
-					} else if (deviceId.length == 2) {
-						deviceIdStr = '00' + deviceId
-					} else if (deviceId.length == 3) {
-						deviceIdStr = '0' + deviceId
-					} else if (deviceId.length == 4) {
-						deviceIdStr = '' + deviceId
+					if (deviceIdStr.length == 1) {
+						deviceIdStr = '000' + deviceIdStr
+					} else if (deviceIdStr.length == 2) {
+						deviceIdStr = '00' + deviceIdStr
+					} else if (deviceIdStr.length == 3) {
+						deviceIdStr = '0' + deviceIdStr
+					} else if (deviceIdStr.length == 4) {
+						deviceIdStr = '' + deviceIdStr
 					}
 					deviceIdArr = ['0x' + deviceIdStr.slice(2, 4), '0x' + deviceIdStr.slice(0, 2)]
 				}
@@ -147,9 +147,8 @@ var getActionDefinitions = function (self) {
 				var sendBuf = Buffer.from(cmd)
 
 				if (sendBuf) {
-					if (self.udp !== undefined) {
-						self.log('debug', 'sending to ' + self.config.host + ': ' + sendBuf.toString())
-						self.udp.send(sendBuf)
+					if (self.socket !== undefined && self.socket.isConnected) {
+						self.socket.send(sendBuf)
 					}
 				}
 			},
@@ -165,6 +164,7 @@ var getActionDefinitions = function (self) {
 					max: 64,
 					default: 1,
 					required: true,
+					isVisible: (action) => !action.issel,
 				},
 				{
 					type: 'dropdown',
@@ -198,17 +198,16 @@ var getActionDefinitions = function (self) {
 				var deviceIdArr = ['0xff', '0xff']
 
 				if (deviceId >= 0 && !isSelAll) {
-					deviceId = deviceId.toString(16)
+					let deviceIdStr = deviceId.toString(16)
 
-					let deviceIdStr = ''
-					if (deviceId.length == 1) {
-						deviceIdStr = '000' + deviceId
-					} else if (deviceId.length == 2) {
-						deviceIdStr = '00' + deviceId
-					} else if (deviceId.length == 3) {
-						deviceIdStr = '0' + deviceId
-					} else if (deviceId.length == 4) {
-						deviceIdStr = '' + deviceId
+					if (deviceIdStr.length == 1) {
+						deviceIdStr = '000' + deviceIdStr
+					} else if (deviceIdStr.length == 2) {
+						deviceIdStr = '00' + deviceIdStr
+					} else if (deviceIdStr.length == 3) {
+						deviceIdStr = '0' + deviceIdStr
+					} else if (deviceIdStr.length == 4) {
+						deviceIdStr = '' + deviceIdStr
 					}
 					deviceIdArr = ['0x' + deviceIdStr.slice(2, 4), '0x' + deviceIdStr.slice(0, 2)]
 				}
@@ -238,9 +237,8 @@ var getActionDefinitions = function (self) {
 				var sendBuf = Buffer.from(cmd)
 
 				if (sendBuf) {
-					if (self.udp !== undefined) {
-						self.log('debug', 'sending to ' + self.config.host + ': ' + sendBuf.toString())
-						self.udp.send(sendBuf)
+					if (self.socket !== undefined && self.socket.isConnected) {
+						self.socket.send(sendBuf)
 					}
 				}
 			},
@@ -256,6 +254,7 @@ var getActionDefinitions = function (self) {
 					max: 64,
 					default: 1,
 					required: true,
+					isVisible: (action) => !action.issel,
 				},
 				{
 					type: 'dropdown',
@@ -279,17 +278,16 @@ var getActionDefinitions = function (self) {
 				var deviceIdArr = ['0xff', '0xff']
 
 				if (deviceId >= 0 && !isSelAll) {
-					deviceId = deviceId.toString(16)
+					let deviceIdStr = deviceId.toString(16)
 
-					let deviceIdStr = ''
-					if (deviceId.length == 1) {
-						deviceIdStr = '000' + deviceId
-					} else if (deviceId.length == 2) {
-						deviceIdStr = '00' + deviceId
-					} else if (deviceId.length == 3) {
-						deviceIdStr = '0' + deviceId
-					} else if (deviceId.length == 4) {
-						deviceIdStr = '' + deviceId
+					if (deviceIdStr.length == 1) {
+						deviceIdStr = '000' + deviceIdStr
+					} else if (deviceIdStr.length == 2) {
+						deviceIdStr = '00' + deviceIdStr
+					} else if (deviceIdStr.length == 3) {
+						deviceIdStr = '0' + deviceIdStr
+					} else if (deviceIdStr.length == 4) {
+						deviceIdStr = '' + deviceIdStr
 					}
 					deviceIdArr = ['0x' + deviceIdStr.slice(2, 4), '0x' + deviceIdStr.slice(0, 2)]
 				}
@@ -319,9 +317,8 @@ var getActionDefinitions = function (self) {
 				var sendBuf = Buffer.from(cmd)
 
 				if (sendBuf) {
-					if (self.udp !== undefined) {
-						self.log('debug', 'sending to ' + self.config.host + ': ' + sendBuf.toString())
-						self.udp.send(sendBuf)
+					if (self.socket !== undefined && self.socket.isConnected) {
+						self.socket.send(sendBuf)
 					}
 				}
 			},
@@ -337,6 +334,7 @@ var getActionDefinitions = function (self) {
 					max: 64,
 					default: 1,
 					required: true,
+					isVisible: (action) => !action.issel,
 				},
 				{
 					type: 'number',
@@ -367,17 +365,16 @@ var getActionDefinitions = function (self) {
                 var brightnessArr = ['0x10', '0x27']
 
                 if (deviceId >= 0 && !isSelAll) {
-                    deviceId = deviceId.toString(16)
+					let deviceIdStr = deviceId.toString(16)
 
-					let deviceIdStr = ''
-					if (deviceId.length == 1) {
-						deviceIdStr = '000' + deviceId
-					} else if (deviceId.length == 2) {
-						deviceIdStr = '00' + deviceId
-					} else if (deviceId.length == 3) {
-						deviceIdStr = '0' + deviceId
-					} else if (deviceId.length == 4) {
-						deviceIdStr = '' + deviceId
+					if (deviceIdStr.length == 1) {
+						deviceIdStr = '000' + deviceIdStr
+					} else if (deviceIdStr.length == 2) {
+						deviceIdStr = '00' + deviceIdStr
+					} else if (deviceIdStr.length == 3) {
+						deviceIdStr = '0' + deviceIdStr
+					} else if (deviceIdStr.length == 4) {
+						deviceIdStr = '' + deviceIdStr
 					}
 					deviceIdArr = ['0x' + deviceIdStr.slice(2, 4), '0x' + deviceIdStr.slice(0, 2)]
                 }
@@ -424,9 +421,8 @@ var getActionDefinitions = function (self) {
 				var sendBuf = Buffer.from(cmd)
 
 				if (sendBuf) {
-					if (self.udp !== undefined) {
-						self.log('debug', 'sending to ' + self.config.host + ': ' + sendBuf.toString())
-						self.udp.send(sendBuf)
+					if (self.socket !== undefined && self.socket.isConnected) {
+						self.socket.send(sendBuf)
 					}
 				}
 			},
