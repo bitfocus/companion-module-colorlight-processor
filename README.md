@@ -1,6 +1,6 @@
 # companion-module-colorlight-processor
-This module will allow you to control the following Colorlight processor:
-Z3, Z4 Pro, Z5, Z6 PRO-G2, Z8, Z8t
+This module will allow you to control the following Colorlight processor:  
+Z-Series, V-Series, VX-Series, D-Series and some X-Series.
 
 ## Configuration
 - In instaces tab specify the ip and port you want to send.

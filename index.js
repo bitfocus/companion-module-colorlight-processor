@@ -16,6 +16,9 @@ class CLTInstance extends InstanceBase {
 	}
 	// When module gets deleted
 	async destroy() {
+		if (this.SERIAL_INTERVAL) {
+			clearInterval(this.SERIAL_INTERVAL)
+		}
 		if (this.socket) {
 			this.socket.destroy()
 		} else {
@@ -47,12 +50,39 @@ class CLTInstance extends InstanceBase {
 		if (this.config.host) {
 			this.socket = new TCPHelper(this.config.host, this.config.port)
 
+			var cmd = [
+				'0x99',
+				'0x99',
+				'0x08',
+				'0x00',
+				'0x00',
+				'0x00',
+				'0x00',
+				'0x00'
+			]
+			var sendBuf = Buffer.from(cmd)
+
+			if (this.SERIAL_INTERVAL) {
+				clearInterval(this.SERIAL_INTERVAL)
+			}
+	
+			this.SERIAL_INTERVAL = setInterval(() => {
+				if (this.socket !== undefined && this.socket.isConnected) {
+					this.log('info', 'HeartBeat')
+					this.socket.send(sendBuf)
+				}
+	
+			}, 1000)
+
 			this.socket.on('status_change', (status, message) => {
 				this.updateStatus(status, message)
 			})
 
 			this.socket.on('error', (err) => {
 				this.updateStatus(InstanceStatus.ConnectionFailure, err.message)
+				if (this.SERIAL_INTERVAL) {
+					clearInterval(this.SERIAL_INTERVAL)
+				}
 				this.log('error', 'Network error: ' + err.message)
 			})
 
