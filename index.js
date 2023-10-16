@@ -60,6 +60,17 @@ class CLTInstance extends InstanceBase {
 				'0x00',
 				'0x00'
 			]
+
+			if (this.config.deviceType == 'Z-Protocol') {
+				cmd = []
+				cmd = [
+					'0x99',
+					'0x99',
+					'0x04',
+					'0x00'
+				]
+			}
+
 			var sendBuf = Buffer.from(cmd)
 
 			if (this.SERIAL_INTERVAL) {
@@ -126,6 +137,23 @@ class CLTInstance extends InstanceBase {
 				label: 'Target Port',
 				width: 4,
 				regex: Regex.PORT,
+			},
+			{
+				type: 'dropdown',
+				id: 'deviceType',
+				label: 'Device Type',
+				width: 6,
+				choices: [
+					{
+						id: 'V-Protocol',
+						label: 'V-Protocol Device'
+					},
+					{
+						id: 'Z-Protocol',
+						label: 'Z-Protocol Device'
+					}
+				],
+				default: 'V-Protocol',
 			},
 		]
 	}

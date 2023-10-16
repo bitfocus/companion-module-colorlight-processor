@@ -21,6 +21,6 @@
 		"entrypoint": "../index.js"
 	},
 	"manufacturer": "Colorlight",
-	"products": ["Z-Series", "some X-Series", "V-Series", "VX-Series", "D-Series"],
+	"products": ["Z-Series", "X-Series", "V-Series", "VX-Series", "D-Series", "some S-Series"],
 	"keywords": ["LED Processing"]
 }
