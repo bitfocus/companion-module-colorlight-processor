@@ -609,26 +609,27 @@ var getActionDefinitions = function (self) {
 					}
 				}
 
-				// cmd = [
-				// 	'0x50',
-				// 	'0x10',
-				// 	'0x00',
-				// 	'0x13',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	deviceIdArr[0],
-				// 	deviceIdArr[1],
-				// 	'0x02',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	'0x00',
-				// 	presetStr
-				// ]
+				cmd = [
+					'0x07',
+					'0x10',
+					'0x03',
+					'0x13',
+					'0x00',
+					'0x00',
+					'0x00',
+					deviceIdArr[0],
+					deviceIdArr[1],
+					'0x00',
+					'0x00',
+					'0x00',
+					'0x00',
+					'0x00',
+					'0x00',
+					'0x00',
+					'0x00',
+					presetStr,
+					'0x00'
+				]
 
 				if (self.config.deviceType == 'Z-Protocol') {
 					cmd = []
