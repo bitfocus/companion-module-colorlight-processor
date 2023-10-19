@@ -544,7 +544,7 @@ var getActionDefinitions = function (self) {
 			},
 		},
 		switch_preset: {
-			name: 'Switch preset(Only for Z-Protocol)',
+			name: 'Switch preset',
 			options: [
 				{
 					type: 'number',
