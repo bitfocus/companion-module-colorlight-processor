@@ -115,49 +115,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     X8m: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -165,49 +165,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     X12m: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -215,49 +215,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     X20m: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -265,49 +265,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     X26m: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -315,49 +315,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     X40m: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -365,49 +365,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     D9: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -415,49 +415,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     D16: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -465,49 +465,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     V2: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -515,49 +515,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     'V2 Pro': {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -565,49 +565,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     V3: {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -615,49 +615,49 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     'V3 Pro': {
         '12G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x22,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         'DP1.4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x21,
             interfaceId: 0x02
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x03
         },
         'HDMI1.4-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x04
         },
         'HDMI1.4-3': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'HDMI1.4-4': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x06
         },
         'HDMI1.4-5': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x07
         }
@@ -665,37 +665,37 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP = {
     VX10: {
         '3G-SDI': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x12,
             interfaceId: 0x00
         },
         'HDMI2.0': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x20,
             interfaceId: 0x01
         },
         MOSAIC: {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x25,
             interfaceId: 0x04
         },
         'HDMI1.4-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x11,
             interfaceId: 0x05
         },
         'DVI-1': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x06
         },
         'DVI-2': {
             boardType: 0x18,
-            boardId: 0x00,
+            boardId: 0x10,
             interfaceType: 0x10,
             interfaceId: 0x07
         }
@@ -1063,6 +1063,7 @@ function setupLayerSignalAction(context) {
             ];
             const actionSendBuf = Buffer.from(actionCommand);
             context.send(actionSendBuf);
+            log_1.logger.info(`actionBuf: ${actionSendBuf.toString('hex')}`);
             // 生效命令
             const efficientCommand = [0x52, 0x00, 0x10, 0x00, 0x00, 0x00, deviceIndexBuf[0], deviceIndexBuf[1], 0x00];
             const efficientSendBuf = Buffer.from(efficientCommand);
