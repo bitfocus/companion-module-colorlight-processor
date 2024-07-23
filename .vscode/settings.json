@@ -1,0 +1,10 @@
+{
+  // 统一换行符
+  "files.eol": "\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
+  "cSpell.words": ["bgcolor", "chukie", "colorlight", "colorpicker", "CVBS"]
+}

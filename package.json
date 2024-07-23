@@ -1,21 +1,22 @@
 {
-	"name": "colorlight-processor",
-	"version": "1.0.2",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"format": "prettier -w ."
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-colorlight-processor.git"
-	},
-	"dependencies": {
-		"@companion-module/base": "~1.0.2"
-	},
-	"devDependencies": {
-		"@companion-module/tools": "^0.5.1"
-	},
-	"prettier": "@companion-module/tools/.prettierrc.json"
+  "name": "companion-module-colorlight-processor",
+  "version": "2.0.0",
+  "description": "simply control colorlight processors",
+  "keywords": [],
+  "author": "clt",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "rimraf dist && tsc --watch",
+    "build": "rimraf dist && tsc"
+  },
+  "dependencies": {
+    "@companion-module/base": "~1.0.2"
+  },
+  "devDependencies": {
+    "@companion-module/tools": "^0.5.1",
+    "@types/node": "^20.14.9",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
+  }
 }
