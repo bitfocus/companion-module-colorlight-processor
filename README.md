@@ -17,3 +17,5 @@ Z-Series, X-Series, V-Series, VX-Series, D-Series and some S-Series.
 - Switch test mode
 - Adjust brightness
 - Switch preset
+- Custom command
+- Switch layer's signal

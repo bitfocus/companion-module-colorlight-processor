@@ -1092,8 +1092,6 @@ export function setupLayerSignalAction(context: ActionContext) {
       const actionSendBuf = Buffer.from(actionCommand)
       context.send(actionSendBuf)
 
-      logger.info(`actionBuf: ${actionSendBuf.toString('hex')}`)
-
       // 生效命令
       const efficientCommand = [0x52, 0x00, 0x10, 0x00, 0x00, 0x00, deviceIndexBuf[0], deviceIndexBuf[1], 0x00]
       const efficientSendBuf = Buffer.from(efficientCommand)
