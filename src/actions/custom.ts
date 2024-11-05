@@ -7,7 +7,7 @@ type OptionValues = {
 }
 
 /**
- * 设置自定义命令操作
+ * Custom command action
  */
 export function setCustomCommandAction(context: ActionContext) {
   const action: CompanionActionDefinition = {

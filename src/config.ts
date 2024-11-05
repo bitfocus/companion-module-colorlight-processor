@@ -3,7 +3,7 @@ import type { DeviceConfig } from './types'
 import { Regex } from '@companion-module/base'
 
 /**
- * 默认配置项
+ * default config
  */
 export const defaultConfig: DeviceConfig = {
   host: '192.168.1.10',
@@ -12,7 +12,7 @@ export const defaultConfig: DeviceConfig = {
 }
 
 /**
- * 生成连接实例配置项的字段和约束
+ * Generate config fields
  */
 export function generateConfigFields(): SomeCompanionConfigField[] {
   return [

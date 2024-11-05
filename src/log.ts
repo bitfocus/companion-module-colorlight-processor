@@ -5,8 +5,8 @@ type LogFn = (level: LogLevel, message: string) => void
 let logFn: LogFn = () => {}
 
 /**
- * 设置日志输出函数
- * @param fn 日志输出函数
+ * setup logger
+ * @param fn log function
  */
 export function setupLogger(fn: LogFn): void {
   logFn = fn
@@ -14,28 +14,28 @@ export function setupLogger(fn: LogFn): void {
 
 export const logger = {
   /**
-   * 输出信息级别日志
+   * output info log
    */
   info(message: string): void {
     logFn('info', message)
   },
 
   /**
-   * 输出警告级别日志
+   * output warning log
    */
   warn(message: string): void {
     logFn('warn', message)
   },
 
   /**
-   * 输出错误级别日志
+   * output error log
    */
   error(message: string): void {
     logFn('error', message)
   },
 
   /**
-   * 输出调试级别日志
+   * output debug log
    */
   debug(message: string): void {
     logFn('debug', message)

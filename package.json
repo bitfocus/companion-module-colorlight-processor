@@ -2,7 +2,6 @@
   "name": "companion-module-colorlight-processor",
   "version": "1.1.0",
   "description": "simply control colorlight processors",
-  "keywords": [],
   "author": "clt",
   "license": "MIT",
   "main": "dist/index.js",

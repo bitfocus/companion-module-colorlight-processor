@@ -9,11 +9,11 @@ import { setupActions } from './actions'
 import { setupFeedbacks } from './feedbacks'
 
 class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
-  // 配置对象
+  // device config
   public config: DeviceConfig
-  // 连接
+  // connection instance
   public connection: Connection
-  // 状态缓存
+  // state cache
   public state: StateCache
 
   constructor(internal: unknown) {
@@ -28,12 +28,12 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
     }
     this.state = new StateCache(stateContext)
 
-    // 初始化日志工具
+    // init logger
     setupLogger(this.log.bind(this))
   }
 
   /**
-   * 初始化和开启实例
+   * init connection instance
    */
   public async init(config: DeviceConfig, isFirstInit: boolean): Promise<void> {
     logger.info('Init connection instance.')
@@ -48,7 +48,7 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
   }
 
   /**
-   * 销毁或关闭实例
+   * destroy connection instance
    */
   public async destroy(): Promise<void> {
     this.connection.close()
@@ -57,7 +57,7 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
   }
 
   /**
-   * 初始化操作
+   * init actions
    */
   private initActions(): void {
     logger.info('Init actions.')
@@ -66,7 +66,7 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
   }
 
   /**
-   * 初始化反馈
+   * init feedbacks
    */
   private initFeedbacks(): void {
     logger.info('Init feedbacks.')
@@ -75,14 +75,13 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
   }
 
   /**
-   * 实例配置更新
+   * config updated
    */
   public async configUpdated(config: DeviceConfig): Promise<void> {
     this.config = config
 
     logger.info('Config updated.')
 
-    // 简单校验 host 配置项即可
     if (this.config.host) {
       this.connection.open(this.config.host, this.config.port)
     } else {
@@ -90,25 +89,25 @@ class CltProcessor extends InstanceBase<DeviceConfig> implements ProcessorBase {
     }
 
     this.initActions()
-    false && this.initFeedbacks() // 暂时关闭反馈
+    false && this.initFeedbacks() // TODO: enable feedbacks
   }
 
   /**
-   * 设置配置项
+   * get config fields
    */
   public getConfigFields(): SomeCompanionConfigField[] {
     return generateConfigFields()
   }
 
   /**
-   * 触发反馈
+   * trigger feedbacks by id
    */
   public triggerFeedback(id: string): void {
     this.checkFeedbacksById(id)
   }
 
   /**
-   * 发送数据
+   * send data
    */
   public async send(data: Buffer): Promise<boolean> {
     return this.connection.send(data)

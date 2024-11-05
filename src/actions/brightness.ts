@@ -9,7 +9,7 @@ type OptionValues = {
 }
 
 /**
- * 初始化亮度操作
+ * Set brightness action
  */
 export function setupSetBrightnessAction(context: ActionContext) {
   const action: CompanionActionDefinition = {
@@ -52,13 +52,11 @@ export function setupSetBrightnessAction(context: ActionContext) {
       if (deviceIndex >= 0 && !isSelectAll) {
         const buf = Buffer.alloc(2)
 
-        // 小端字节序写入
         buf.writeUInt16LE(deviceIndex & 0xffff, 0)
 
         deviceIndexBuf = buf
       }
 
-      // 命令参数
       let command: number[] = []
 
       if (context.config.protocol === 'V-Protocol') {
@@ -68,7 +66,6 @@ export function setupSetBrightnessAction(context: ActionContext) {
         if (transBrightness >= 0) {
           const buf = Buffer.alloc(2)
 
-          // 小端字节序写入
           buf.writeUInt16LE(transBrightness & 0xffff, 0)
 
           brightnessBuf = buf
@@ -98,7 +95,7 @@ export function setupSetBrightnessAction(context: ActionContext) {
       }
 
       if (context.config.protocol === 'Z-Protocol') {
-        const transBrightness = Math.round(brightness * 100) / 100 // 保留两位小数
+        const transBrightness = Math.round(brightness * 100) / 100 // Keep two decimal places
         let brightnessBuf = Buffer.from([0x00, 0x00, 0x00, 0x00])
 
         if (transBrightness >= 0) {

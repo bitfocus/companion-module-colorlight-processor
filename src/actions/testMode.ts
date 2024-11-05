@@ -9,7 +9,7 @@ type OptionValues = {
 }
 
 /**
- * 预置测试模式选项
+ * test mode choices
  */
 const TEST_MODES_CHOICES = [
   {
@@ -75,7 +75,7 @@ const TEST_MODES_CHOICES = [
 ]
 
 /**
- * 初始化测试模式操作
+ * test mode action
  */
 export function setupTestModeAction(context: ActionContext) {
   const action: CompanionActionDefinition = {
@@ -113,7 +113,6 @@ export function setupTestModeAction(context: ActionContext) {
       if (deviceIndex >= 0 && !isSelectAll) {
         const buf = Buffer.alloc(2)
 
-        // 小端字节序写入
         buf.writeUInt16LE(deviceIndex & 0xffff, 0)
 
         deviceIndexBuf = buf

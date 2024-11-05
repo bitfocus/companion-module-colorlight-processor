@@ -2,7 +2,7 @@ import type { InstanceBase } from '@companion-module/base'
 import type { StateCache } from './state'
 
 /**
- * 设备配置
+ * device config
  */
 export type DeviceConfig = {
   host: string
@@ -11,7 +11,7 @@ export type DeviceConfig = {
 }
 
 /**
- * 连接实例的基础接口
+ * base processor
  */
 export interface ProcessorBase {
   config: DeviceConfig
@@ -20,24 +20,24 @@ export interface ProcessorBase {
 }
 
 /**
- * 操作上下文
+ * action context
  */
 export type ActionContext = ProcessorBase
 
 /**
- * 反馈上下文
+ * feedback context
  */
 export type FeedbackContext = ProcessorBase
 
 /**
- * 状态上下文
+ * state context
  */
 export type StateContext = {
   triggerFeedbacks(...ids: string[]): void
 }
 
 /**
- * 连接上下文
+ * connection context
  */
 export type ConnectionContext = {
   config: DeviceConfig

@@ -10,7 +10,7 @@ import { setCustomCommandAction } from './custom'
 import { setupLayerSignalAction } from './layerSignal'
 
 /**
- * 操作类型 id 枚举
+ * action ids
  */
 export enum ACTION_ID {
   BLACK_SCREEN = 'black_screen',
@@ -23,10 +23,10 @@ export enum ACTION_ID {
 }
 
 /**
- * 初始化操作
+ * init actions
  */
 export function setupActions(context: ActionContext): CompanionActionDefinitions {
-  // 操作定义对象
+  // setup actions
   const actions: CompanionActionDefinitions = {
     [ACTION_ID.BLACK_SCREEN]: setupBlackScreenAction(context),
     [ACTION_ID.FREEZE_SCREEN]: setupFreezeScreenAction(context),

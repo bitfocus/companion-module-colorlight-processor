@@ -3,7 +3,7 @@ import { FEEDBACK_ID } from '../feedbacks'
 import { logger } from '../log'
 
 /**
- * 状态缓存
+ * state cache
  */
 class StateCache {
   private context: StateContext
@@ -26,7 +26,7 @@ class StateCache {
 
     logger.info(`Black screen state changed: ${value}`)
 
-    // 触发黑屏反馈
+    // trigger black screen feedback
     this.context.triggerFeedbacks(FEEDBACK_ID.BLACK_SCREEN)
   }
 

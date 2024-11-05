@@ -17,7 +17,7 @@ type InterfaceMark = {
 }
 
 /**
- * V 协议支持设备列表
+ * devices supported by the V protocol
  */
 const V_PROTOCOL_DEVICES = [
   {
@@ -71,7 +71,7 @@ const V_PROTOCOL_DEVICES = [
 ]
 
 /**
- * V 协议支持信号列表
+ * signals supported by the V protocol
  */
 const V_PROTOCOL_SIGNALS = [
   {
@@ -125,7 +125,7 @@ const V_PROTOCOL_SIGNALS = [
 ]
 
 /**
- * V 协议设备信号映射表
+ * device signal mapping table for the V protocol
  */
 const V_PROTOCOL_DEVICE_SIGNAL_MAP: Record<string, Record<string, InterfaceMark>> = {
   X8m: {
@@ -719,7 +719,7 @@ const V_PROTOCOL_DEVICE_SIGNAL_MAP: Record<string, Record<string, InterfaceMark>
 }
 
 /**
- * Z 协议支持设备列表
+ * devices supported by the Z protocol
  */
 const Z_PROTOCOL_DEVICES = [
   {
@@ -733,7 +733,7 @@ const Z_PROTOCOL_DEVICES = [
 ]
 
 /**
- * Z 协议支持信号列表
+ * signals supported by the Z protocol
  */
 const Z_PROTOCOL_SIGNALS = [
   {
@@ -935,7 +935,7 @@ const Z_PROTOCOL_SIGNALS = [
 ]
 
 /**
- * Z 协议设备信号映射表
+ * device signal mapping table for the Z protocol
  */
 const Z_PROTOCOL_DEVICE_SIGNAL_MAP: Record<string, Record<string, number>> = {
   Z6: {
@@ -998,7 +998,7 @@ const Z_PROTOCOL_DEVICE_SIGNAL_MAP: Record<string, Record<string, number>> = {
 }
 
 export function setupLayerSignalAction(context: ActionContext) {
-  // V 协议预置动作
+  // preset action for the V protocol
   const vProtocolAction: CompanionActionDefinition = {
     name: `Layer's Signal`,
     options: [
@@ -1056,12 +1056,11 @@ export function setupLayerSignalAction(context: ActionContext) {
 
       logger.info(`change layer's signal action trigger, interfaceMark: ${JSON.stringify(interfaceMark)}`)
 
-      // 板卡 id 为两个字节
+      // boardId - 2 bytes
       const boardIdBuf = Buffer.alloc(2)
-      // 小端字节序写入
+      // Small endian byte order write
       boardIdBuf.writeUInt16LE(interfaceMark.boardId & 0xffff, 0)
 
-      // 命令参数
       const actionCommand = [
         0x20,
         0x10,
@@ -1092,19 +1091,19 @@ export function setupLayerSignalAction(context: ActionContext) {
       const actionSendBuf = Buffer.from(actionCommand)
       context.send(actionSendBuf)
 
-      // 生效命令
+      // parameter command
       const efficientCommand = [0x52, 0x00, 0x10, 0x00, 0x00, 0x00, deviceIndexBuf[0], deviceIndexBuf[1], 0x00]
       const efficientSendBuf = Buffer.from(efficientCommand)
       context.send(efficientSendBuf)
 
-      // 保存命令
+      // save command
       const saveCommand = [0x50, 0x00, 0x10, 0x00, 0x00, 0x00, deviceIndexBuf[0], deviceIndexBuf[1], 0x00]
       const saveSendBuf = Buffer.from(saveCommand)
       context.send(saveSendBuf)
     }
   }
 
-  // Z 协议预置动作
+  // preset action for the Z protocol
   const zProtocolAction: CompanionActionDefinition = {
     name: `Layer's Signal`,
     options: [
@@ -1163,7 +1162,6 @@ export function setupLayerSignalAction(context: ActionContext) {
 
       logger.info(`change layer's signal action trigger, interfaceId: ${interfaceId}`)
 
-      // 操作命令参数
       const actionCommand = [
         0x33,
         0x00,
@@ -1188,7 +1186,7 @@ export function setupLayerSignalAction(context: ActionContext) {
       const actionSendBuf = Buffer.from(actionCommand)
       context.send(actionSendBuf)
 
-      // 生效命令
+      // parameter command
       const efficientCommand = [
         0x6f,
         0x00,
@@ -1210,7 +1208,7 @@ export function setupLayerSignalAction(context: ActionContext) {
       const efficientSendBuf = Buffer.from(efficientCommand)
       context.send(efficientSendBuf)
 
-      // 保存命令
+      // save command
       const saveCommand = [
         0x10,
         0x00,

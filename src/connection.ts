@@ -2,17 +2,17 @@ import type { ConnectionContext } from './types'
 import { TCPHelper, InstanceStatus } from '@companion-module/base'
 import { logger } from './log'
 
-// tcp 心跳间隔
+// tcp heartbeat interval
 const TCP_HEARTBEAT_INTERVAL = 1500
-// tcp 重连间隔
+// tcp reconnect interval
 const TCP_RECONNECT_INTERVAL = 3000
 
 class Connection {
-  // 上下文对象
+  // connection context
   private context: ConnectionContext
-  // socket 连接实例
+  // socket instance
   private socket: TCPHelper | null = null
-  // 心跳定时器
+  // heartbeat timer
   private heartbeatTimer: NodeJS.Timeout | null = null
 
   constructor(context: ConnectionContext) {
@@ -20,7 +20,7 @@ class Connection {
   }
 
   /**
-   * 启动 tcp 心跳
+   * open connection
    */
   private startHeartbeat(): void {
     if (!this.context.config) return
@@ -44,7 +44,7 @@ class Connection {
   }
 
   /**
-   * 停止 tcp 心跳
+   * stop heartbeat
    */
   private stopHeartbeat(): void {
     if (this.heartbeatTimer) {
@@ -54,13 +54,13 @@ class Connection {
   }
 
   /**
-   * 绑定 tcp 连接事件
+   * bind socket events
    */
   private bindSockEvents(socket: TCPHelper): void {
     socket.on('status_change', (status) => {
       logger.info(`TCP connection status change, status: ${status}`)
 
-      // 连接成功开启心跳
+      // start heartbeat when connection is ok
       if (status === InstanceStatus.Ok) {
         this.startHeartbeat()
       }
@@ -78,29 +78,29 @@ class Connection {
   }
 
   /**
-   * 初始化和开启连接实例
+   * open tcp connection
    */
   public open(host: string, port: number) {
-    // 关闭旧的 tcp 连接
+    // close previous connection
     if (this.socket && (this.socket.isConnected || this.socket.isConnecting)) {
       this.close()
     }
 
-    // 建立新的 tcp 连接
+    // create new socket instance
     this.socket = new TCPHelper(host, port, {
       reconnect: true,
       reconnect_interval: TCP_RECONNECT_INTERVAL
     })
 
-    // 绑定事件
+    // bind socket events
     this.bindSockEvents(this.socket)
 
-    // 更新连接中状态
+    // update connection status
     this.context.updateStatus(InstanceStatus.Connecting)
   }
 
   /**
-   * 关闭 tcp 连接
+   * close connection
    */
   public close(): void {
     this.stopHeartbeat()
@@ -109,7 +109,7 @@ class Connection {
   }
 
   /**
-   * 发送数据
+   * send data
    */
   public async send(data: Buffer): Promise<boolean> {
     if (!this.socket?.isConnected) return false

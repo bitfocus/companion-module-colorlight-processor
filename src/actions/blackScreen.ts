@@ -9,7 +9,7 @@ type OptionValues = {
 }
 
 /**
- * 初始化黑屏操作
+ * black screen action
  */
 export function setupBlackScreenAction(context: ActionContext) {
   const action: CompanionActionDefinition = {
@@ -57,13 +57,11 @@ export function setupBlackScreenAction(context: ActionContext) {
       if (deviceIndex >= 0 && !isSelectAll) {
         const buf = Buffer.alloc(2)
 
-        // 小端字节序写入
         buf.writeUInt16LE(deviceIndex & 0xffff, 0)
 
         deviceIndexBuf = buf
       }
 
-      // 命令参数
       let command: number[] = []
 
       if (context.config.protocol === 'V-Protocol') {

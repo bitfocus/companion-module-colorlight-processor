@@ -4,7 +4,7 @@ import { combineRgb } from '@companion-module/base'
 import { logger } from '../log'
 
 /**
- * 黑屏反馈
+ * blackScreen feedback
  */
 export function setupBlackScreenFeedback(context: FeedbackContext): CompanionAdvancedFeedbackDefinition {
   const ColorWhite = combineRgb(255, 255, 255)
