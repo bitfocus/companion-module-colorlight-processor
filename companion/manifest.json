@@ -3,7 +3,7 @@
   "name": "colorlight-processor",
   "shortname": "colorlight",
   "description": "colorlight-processor",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "repository": "git+https://github.com/bitfocus/companion-module-colorlight-processor.git",
   "bugs": "https://github.com/bitfocus/companion-module-colorlight-processor/issues",
@@ -21,6 +21,6 @@
     "entrypoint": "../dist/index.js"
   },
   "manufacturer": "Colorlight",
-  "products": ["Z-Series", "X-Series", "V-Series", "VX-Series", "D-Series", "some S-Series"],
+  "products": ["U-Series", "Z-Series", "X-Series", "V-Series", "VX-Series", "D-Series", "some S-Series"],
   "keywords": ["LED Processing"]
 }

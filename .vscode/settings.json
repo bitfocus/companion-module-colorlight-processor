@@ -1,5 +1,4 @@
 {
-  // 统一换行符
   "files.eol": "\n",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
