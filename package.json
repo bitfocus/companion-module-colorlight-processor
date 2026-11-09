@@ -11,10 +11,10 @@
     "package": "companion-module-build"
   },
   "dependencies": {
-    "@companion-module/base": "~1.4.3"
+    "@companion-module/base": "~1.15.1"
   },
   "devDependencies": {
-    "@companion-module/tools": "^2.8.0",
+    "@companion-module/tools": "^2.9.0",
     "@types/node": "^20.14.9",
     "rimraf": "^5.0.7",
     "typescript": "^5.5.2"
